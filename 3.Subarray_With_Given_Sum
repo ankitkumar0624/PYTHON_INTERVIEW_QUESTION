@@ -1,0 +1,45 @@
+
+
+Approach 1::
+
+
+# Find Subarray with given Sum (all integer are positive)
+
+L =[1,22,13,7,9,11,10]
+s=16
+
+L1=[]
+
+for i in range(0,len(L)-1):
+  sum = L[i]
+  if(L[i]==s):
+    L1.append(i)
+  for j in range(i+1,len(L)):
+    if(L[j]+sum)>s:
+      break
+    elif(L[j]+sum==s):
+      L1.append(list([i,j]))
+    else:
+      sum+=L[j]
+
+
+Approach :: 2
+
+
+L =[1,22,13,7,9,11,10]
+s=1
+
+d={}
+curr_sum=0
+
+if (s==L[0]):
+  print(0)
+
+for i in range(1,len(L)):
+  curr_sum+=L[i]
+  d[curr_sum]=i
+  if(curr_sum-s in d):
+    print(d[curr_sum-s]+1,i)
+
+
+print(L1)
