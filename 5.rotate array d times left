@@ -1,7 +1,21 @@
 ## rotate array d times left
 
+Approach 1::
+
 L=[1,2,3,4,5]
 d=5
 L1=[]
 L1.extend(L[d:])
 L1.extend(L[:d])
+
+Approach 2::
+
+L=[1,2,3,4,5]
+rotate=4
+
+for i in range(0,rotate):
+  temp=L[0]
+  for j in range(0,len(L)-1):
+    L[j]=L[j+1]
+  L[len(L)-1]=temp
+print(L)
