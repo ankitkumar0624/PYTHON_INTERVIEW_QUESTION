@@ -1,0 +1,7 @@
+## rotate array d times left
+
+L=[1,2,3,4,5]
+d=5
+L1=[]
+L1.extend(L[d:])
+L1.extend(L[:d])
