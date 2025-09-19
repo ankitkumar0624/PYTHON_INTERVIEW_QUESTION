@@ -1,0 +1,33 @@
+## intersection of two array
+
+Approach 1:: O(n)
+
+L1=[1,2,3,7,9]
+L2=[5,6,7,8,9]
+
+for i in L1:
+  if i in L2:
+    print(i)
+
+
+Approach 2:: O(n)
+
+L1=[1,2,3,7,9]
+L2=[5,6,7,8,9]
+
+m=len(L1)
+n=len(L2)
+i,j=0,0
+
+while(i < m and j < n):
+    if(L1[i] == L2[j]):
+      print(L1[i],L2[j])
+      ##print('a',i,j)
+      i+=1
+      j+=1
+    elif(L1[i]>L2[j]):
+      ##print('b',i,j)
+      j+=1
+    else:
+      ##print('c',i,j)
+      i+=1
