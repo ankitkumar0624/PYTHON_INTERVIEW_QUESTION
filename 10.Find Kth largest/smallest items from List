@@ -1,0 +1,8 @@
+## Find Kth largest/smallest items from List
+
+L = [1,22,44,55,6,6]
+k=2
+
+L1 = sorted(L)
+L2 = sorted(L,reverse=True)
+print(L2[k-1],L1[k-1])
