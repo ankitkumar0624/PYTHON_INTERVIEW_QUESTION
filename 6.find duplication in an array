@@ -1,0 +1,14 @@
+find duplication in an array
+
+L=[1,1,1,2,2,3,4,4,5]
+
+d={}
+
+for i in L:
+  d[i]=L.count(i)
+
+print(d)
+
+for i in d:
+  if d[i]>1:
+    print(i)
