@@ -1,0 +1,19 @@
+## MAX MIN value of an array
+
+max_val = -2**63
+min_val = 2**63-1
+
+print(max_val)
+print(min_val)
+
+L =[1,22,3,4]
+
+for i in L:
+  if(min_val>i):
+    min_val = i
+  if(max_val<i):
+    max_val = i
+
+print(max_val)
+print(min_val)
+
